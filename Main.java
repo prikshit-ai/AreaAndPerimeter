@@ -17,6 +17,20 @@ public class Main {
     System.out.println("_________________");
     System.out.println("sides of rectangle .."+ Rectangle.getNumSides());
 
+    // circle 
+
+    System.out.println("enter radius of circle ");
+    double radius = Double.parseDouble(scan.nextLine());
+    Shape circle = new circle(radius);
+    System.out.println("_________________");
+    System.out.println("area of circle .."+ circle.calculateArea());
+    System.out.println("_________________");
+    System.out.println("Perimeter of circle .."+ circle.calculatePerimeter());
+    System.out.println("_________________");
+    System.out.println("sides of circle .."+ circle.getNumSides());
+        
+
+
     
     }
 }
