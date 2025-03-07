@@ -1,54 +1,54 @@
-import java.util.*;
+// Prikshit Gaur
+// AIML - B1
+// 23070126094
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("enter length of rectangle ");
-        double length = Double.parseDouble(scan.nextLine());
-        System.out.println("enter width of rectangle ");
-        double width = Double.parseDouble(scan.nextLine());
 
-    
-    Shape Rectangle = new Rectangle(length,width);
-    System.out.println("_________________");
-    System.out.println("area of rectangle .."+ Rectangle.calculateArea());
-    System.out.println("_________________");
-    System.out.println("Perimeter of rectangle .."+ Rectangle.calculatePerimeter());
-    System.out.println("_________________");
-    System.out.println("sides of rectangle .."+ Rectangle.getNumSides());
+        // Rectangle
+        System.out.println("Enter length of rectangle:");
+        double length = scan.nextDouble();
+        System.out.println("Enter width of rectangle:");
+        double width = scan.nextDouble();
+        Shape rectangle = new Rectangle(length, width);
+        System.out.println("Area of Rectangle: " + rectangle.calculateArea());
+        System.out.println("Perimeter of Rectangle: " + rectangle.calculatePerimeter());
 
-    // circle 
+        // Circle
+        System.out.println("\nEnter radius of circle:");
+        double radius = scan.nextDouble();
+        Shape circle = new circle(radius);
+        System.out.println("Area of Circle: " + circle.calculateArea());
+        System.out.println("Perimeter of Circle: " + circle.calculatePerimeter());
 
-    System.out.println("enter radius of circle ");
-    double radius = Double.parseDouble(scan.nextLine());
-    Shape circle = new circle(radius);
-    System.out.println("_________________");
-    System.out.println("area of circle .."+ Math.floor(circle.calculateArea()));
-    System.out.println("_________________");
-    System.out.println("Perimeter of circle .."+ Math.floor(circle.calculatePerimeter()));
-    System.out.println("_________________");
-    System.out.println("sides of circle .."+ circle.getNumSides());
+        // Sphere
+        System.out.println("\nEnter radius of sphere:");
+        double sphereRadius = scan.nextDouble();
+        Sphere sphere = new Sphere(sphereRadius);
+        System.out.println("Surface Area of Sphere: " + sphere.calculateArea());
+        System.out.println("Volume of Sphere: " + sphere.calculateVolume());
 
-    //cuboid 
-   
-    System.out.println("enter length of cuboid ");
-    double length1 = Double.parseDouble(scan.nextLine());
-    System.out.println("enter width of cuboid ");
-    double width1 = Double.parseDouble(scan.nextLine());
-    System.out.println("enter width of cuboid ");
-    double height1 = Double.parseDouble(scan.nextLine());
+        // Cylinder
+        System.out.println("\nEnter radius of cylinder:");
+        double cylRadius = scan.nextDouble();
+        System.out.println("Enter height of cylinder:");
+        double cylHeight = scan.nextDouble();
+        Cylinder cylinder = new Cylinder(cylRadius, cylHeight);
+        System.out.println("Surface Area of Cylinder: " + cylinder.calculateArea());
+        System.out.println("Volume of Cylinder: " + cylinder.calculateVolume());
 
-    Shape Cuboid = new Cuboid(length1,width1,height1);
-    System.out.println("_________________");
-    System.out.println("area of cuboid.."+ Cuboid.calculateArea());
-    System.out.println("_________________");
-    System.out.println("Perimeter of Cuboid .."+Cuboid.calculatePerimeter());
-    System.out.println("_________________");
-    System.out.println("sides of Cuboid .."+ Cuboid.getNumSides());
+        // Equilateral Pyramid
+        System.out.println("\nEnter base side length of Equilateral Pyramid:");
+        double pyramidBase = scan.nextDouble();
+        System.out.println("Enter height of Equilateral Pyramid:");
+        double pyramidHeight = scan.nextDouble();
+        EquilateralPyramid pyramid = new EquilateralPyramid(pyramidBase, pyramidHeight);
+        System.out.println("Surface Area of Pyramid: " + pyramid.calculateArea());
+        System.out.println("Volume of Pyramid: " + pyramid.calculateVolume());
 
-        
-
-
-    
+        scan.close();
     }
 }
